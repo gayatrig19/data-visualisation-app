@@ -1,3 +1,6 @@
+/* Developed by - Gayatri Ghogare
+ Janus Technology Interview Task */
+
 import React, { useEffect, useState } from "react";
 import EnergyTemperatureGraph from "./components/EnergyTemperatureGraph";
 import styles from "./App.module.css";
