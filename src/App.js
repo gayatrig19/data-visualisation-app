@@ -10,7 +10,10 @@ function App() {
   useEffect(() => {
     fetch("./data/example_data.json")
       .then((response) => response.json())
-      .then((data) => setChartData(data))
+      .then((data) => {
+        // console.log("Fetched data:", data);
+        setChartData(data);
+      })
       .catch((error) => console.error("Error fetching JSON file:", error));
   }, []); // Empty dependency array ensures this runs only once, when the component mounts
 

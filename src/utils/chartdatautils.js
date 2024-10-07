@@ -12,7 +12,8 @@ export const prepareDatasets = (consumption, temperature) => {
     y: temp.value,
   }));
 
-  // Return an array of Consumotion(bar chart) and Temp data(line graph)
+  /* Return an array of datasets for the chart:
+  Consumption(bar chart) and Temp data(line graph) */
   return [
     {
       label: "Temperature / C",
@@ -72,8 +73,8 @@ export const chartOptions = {
           return value.toString().replace(",", "");
         },
       },
-      barPercentage: 1, 
-      categoryPercentage: 1, 
+      barPercentage: 1,
+      categoryPercentage: 1,
       borderWidth: 1,
     },
     y: {
@@ -90,7 +91,7 @@ export const chartOptions = {
         stepSize: 5,
         callback: function (value) {
           const validTicks = [0, 5, 10, 15, 20, 25, 30];
-          return validTicks.includes(value) ? value : ""; 
+          return validTicks.includes(value) ? value : "";
         },
       },
       min: 0,
@@ -110,7 +111,7 @@ export const chartOptions = {
         stepSize: 2,
         callback: function (value) {
           const validTicks = [0, 2, 4, 6, 8, 10, 12, 14];
-          return validTicks.includes(value) ? value : ""; 
+          return validTicks.includes(value) ? value : "";
         },
       },
       min: 0,

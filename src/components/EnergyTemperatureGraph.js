@@ -33,7 +33,7 @@ const EnergyTemperatureGraph = ({ data }) => {
   const { consumption, temperature } = data;
 
   // useMemo to optimize chart data calculation
-  // recalculate only when consumption/temperature changes
+  // recalculate only when consumption/temperature data changes
   const chartData = useMemo(() => {
     return {
       labels: generateTimeLabels(),

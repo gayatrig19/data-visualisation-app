@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Janus Technology Interview Task
+## Energy Usage and Temperature Data Visualisation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Overview
 
-## Available Scripts
+This project is a React application designed to visualise energy usage and temperature data through interactive charts. It empowers users to gain insights into their energy usage patterns and observe how these patterns correlate with temperature over time. The application provides a visualization of both energy consumption (in kWh) temperature (in degrees Celsius) over time (in minutes) on a single graph. The data is sourced from a JSON file, and the graph combines a line chart to display temperature and a bar chart to show hourly energy consumption, both plotted against time from midnight to midnight.
 
-In the project directory, you can run:
+The graph uses dual Y-axes: one for energy consumption and one for temperature. The X-axis represents time of day in minutes (0 to 1440), where 810 minutes would correspond to 1:30 PM.
 
-### `npm start`
+The temperature data is sparse and not recorded at consistent intervals, while energy consumption is measured hourly. The visualization allows users to easily interpret and analyse hourly energy consumption alongside temperature over time on the same graph.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Functionality
 
-### `npm test`
+- Line Graph for Temperature: Displays temperature values on a continuous line. The Y-axis for temperature is scaled in degrees Celsius.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Bar Chart for Energy Consumption: Displays hourly energy consumption as bars. The Y-axis for energy is scaled in kWh.
 
-### `npm run build`
+- Dual Y-Axis Scales: The graph utilizes two Y-axes to allow simultaneous visualization of both datasets.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Dynamic Data Loading: The data is loaded from a JSON file, which contains both temperature and energy consumption information with time in minutes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Implementation
 
-### `npm run eject`
+This project was implemented in VS Code using React and Chart.js (through the react-chartjs-2 library). The app dynamically fetches data from a provided JSON file and plots it using a combined line and bar chart.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Installed Node.js
+2. Create a New Project - `janus-react-task`
+4. Create a react app:
+    - `npx create-react-app data-visualisation-app`
+    - cd data-visualisation-app
+5. Installed necessary dependencies for using chart.js library:
+    - `npm install react-chartjs-2 chart.js`
+6. Create the necessary files and directories.
+    
+         
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Technologies Used
+- VS Code: To implement application. 
+- React: JavaScript library to create the user interface.
+- Chart.js: A JavaScript library for data visualization, utilized via react-chartjs-2 to render the charts.
+- JavaScript: For logic and interactivity.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Component Breakdown
 
-## Learn More
+The project consists of components that render charts using the `react-chartjs-2` and `chart.js` libraries. The main focus is on presenting energy consumption and temperature data effectively.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- App.js: The main component that fetches data from the JSON file and renders the EnergyTemperatureGraph component.
+- EnergyTemperatureGraph.js: Handles rendering the dual-axis chart (temperature as a line graph and consumption as a bar chart over time).
+- chartdatautils.js: A utility module containing helper functions to prepare datasets, generate time labels, and configure chart options.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Setting Up Project
