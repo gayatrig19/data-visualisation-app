@@ -19,3 +19,17 @@ h1 {
     margin-top: 20px;
     margin-bottom: 25px;
 }
+
+.ChartContainer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+}
+
+canvas {
+    width: 100% !important;
+    height: auto !important;
+}
