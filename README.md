@@ -7,7 +7,9 @@ This project is a React application designed to visualise energy usage and tempe
 
 The graph uses dual Y-axes: one for energy consumption and one for temperature. The X-axis represents time of day in minutes (0 to 1440), where 810 minutes would correspond to 1:30 PM.
 
-The temperature data is sparse and not recorded at consistent intervals, while energy consumption is measured hourly. The visualization allows users to easily interpret and analyse hourly energy consumption alongside temperature over time on the same graph.
+The temperature data is sparse and not recorded at consistent intervals, while energy consumption is measured hourly. The visualization allows users to easily interpret and analyse hourly energy consumption alongside temperature over time on the same graph. The final combination graph for temperature and consumption with two Y-axis is rendered is as below:
+
+![EnergyUsage-Temperature-Graph](documentation/graph-results/energy-temp-graph.jpg)
 
 
 ### Functionality
@@ -29,7 +31,7 @@ This project was implemented in VS Code and Gitpod using React and Chart.js (thr
 2. Create a New Project and repository
 4. Create a react app:
     - `npx create-react-app data-visualisation-app`
-    - cd data-visualisation-app
+    - `cd data-visualisation-app`
 5. Installed necessary dependencies for using chart.js library:
     - `npm install react-chartjs-2 chart.js`
 6. Create the necessary components files and folders.
